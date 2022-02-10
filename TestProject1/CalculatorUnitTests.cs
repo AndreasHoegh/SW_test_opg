@@ -11,52 +11,39 @@ namespace TestProject1
         [SetUp]
         public void Setup()
         {
+            //Arrangee
+            //gasgsagasgasg
 
             calc = new Calculator();
         }
 
-        [TestCase(3, 2, 5)]
-        [TestCase(-3, -2, -5)]
-        [TestCase(-3, 2, -1)]
-        [TestCase(3, -2, 1)]
-        [TestCase(3, 0, 3)]
-        public void Add_AddPosAndNegNumbers_ResultIsCorrect(int a, int b, int result)
+        [TestCase(7,8,15)]
+        [TestCase(-3,-4,-7)]
+        [TestCase(2,-5,-3)]
+        [TestCase(2.5, 2, 4.5)]
+        public void AddNumbers_ResultIsCorrect(double a, double b, double result)
         {
+            //Act + Assert
             Assert.That(calc.Add(a, b), Is.EqualTo(result));
         }
 
-        [Test]
-        public void Test_Add()
+        [TestCase(7, 8, -1)]
+        [TestCase(-3, -4, 1)]
+        [TestCase(2, -5, 7)]
+        public void SubtractNumbers_ResultIsCorrect(double a, double b, double result)
         {
-
-            //Act
-            double result = calc.Add(1, 2);
-
-            //Assert
-            Assert.That(result, Is.EqualTo(3));
+            //Act + Assert
+            Assert.That(calc.Subtract(a, b), Is.EqualTo(result));
         }
-
-
-        [Test]
-        public void Test_Subtract()
-        {
-
-            //Act
-            double result = calc.Subtract(1, 2);
-
-            //Assert
-            Assert.That(result, Is.EqualTo(-1));
-        }
-
-        [Test]
+        [TestCase(7, 8, 56)]
+        [TestCase(-3, -4, 12)]
+        [TestCase(2, -5, -10)]
+        public void MultiplyNumbers_ResultIsCorrect(double a,double b,double result)
         public void Test_Multiply()
         {
 
-            //Act
-            double result = calc.Multiply(1, 2);
-
-            //Assert
-            Assert.That(result, Is.EqualTo(2));
+            //Act + Assert
+            Assert.That(calc.Multiply(a, b), Is.EqualTo(result));
         }
 
 
@@ -115,6 +102,13 @@ namespace TestProject1
         }
 
 
+        [Test]
+        public void Test_Accumulator()
+        {
+            calc.Add(2, 3);
+            
+            Assert.That(calc.Accumulator, Is.EqualTo(5));
+        }
 
 
 
