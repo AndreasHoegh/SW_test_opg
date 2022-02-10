@@ -9,8 +9,6 @@ namespace TestProject1
         [SetUp]
         public void Setup()
         {
-            //Arrangeashflkhasd
-            //gasgsagasgasg
 
             calc = new Calculator();
         }
@@ -26,6 +24,7 @@ namespace TestProject1
             //Assert
             Assert.That(result, Is.EqualTo(3));
         }
+
 
         [Test]
         public void Test_Subtract()
