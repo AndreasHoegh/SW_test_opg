@@ -66,6 +66,13 @@ namespace TestProject1
         }
 
 
+        [Test]
+        public void Test_Accumulator()
+        {
+            calc.Add(2, 3);
+            
+            Assert.That(calc.Accumulator, Is.EqualTo(5));
+        }
 
     }
 }
