@@ -9,7 +9,7 @@ namespace TestProject1
         [SetUp]
         public void Setup()
         {
-            //Arrange
+            //Arrangee
 
             calc = new Calculator();
         }
