@@ -3,7 +3,7 @@ namespace SW_test_opg
 {
     public class Calculator
     {
-
+        private double result;
 
         public double Add(double a, double b)
         {
@@ -21,5 +21,6 @@ namespace SW_test_opg
         {
             return Math.Pow(x, exp);
         }
+
     }
 }
