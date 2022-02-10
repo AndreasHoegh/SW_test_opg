@@ -19,5 +19,6 @@ namespace SW_test_opg
         {
             return Math.Pow(x, exp);
         }
+
     }
 }
