@@ -39,5 +39,6 @@ namespace SW_test_opg
         {
             Accumulator = 0;
         }
+
     }
 }

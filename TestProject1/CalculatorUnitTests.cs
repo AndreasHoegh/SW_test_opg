@@ -14,7 +14,8 @@ namespace TestProject1
 
             calc = new Calculator();
         }
-        
+
+
         [Test]
         public void Test_Add()
         {
