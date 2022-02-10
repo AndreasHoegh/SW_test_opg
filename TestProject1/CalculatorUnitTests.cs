@@ -9,11 +9,12 @@ namespace TestProject1
         [SetUp]
         public void Setup()
         {
-            //Arrangeashflkhasd
+            //Arrange
 
             calc = new Calculator();
         }
-        
+
+
         [Test]
         public void Test_Add()
         {
