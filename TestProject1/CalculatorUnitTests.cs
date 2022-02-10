@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using SW_test_opg;
 
@@ -6,10 +7,12 @@ namespace TestProject1
     public class Tests
     {
         private Calculator calc;
+
         [SetUp]
         public void Setup()
         {
-            //Arrange
+            //Arrangee
+            //gasgsagasgasg
 
             calc = new Calculator();
         }
@@ -32,7 +35,6 @@ namespace TestProject1
             //Act + Assert
             Assert.That(calc.Subtract(a, b), Is.EqualTo(result));
         }
-
         [TestCase(7, 8, 56)]
         [TestCase(-3, -4, 12)]
         [TestCase(2, -5, -10)]
@@ -43,20 +45,59 @@ namespace TestProject1
             Assert.That(calc.Multiply(a, b), Is.EqualTo(result));
         }
 
-        [Test]
-        public void Test_Power()
-        {
-            double result = calc.Power(9, 2);
 
-            Assert.That(result, Is.EqualTo(81));
+        [TestCase(3, 2,9)]
+        [TestCase(1, 1,1)]
+        [TestCase(-2, 2,4)]
+        [TestCase(1, 0,1)]
+        public void Test_Power(double x,double exp,double result)
+        {
+            double result1 = calc.Power(x,exp);
+
+            Assert.That(result, Is.EqualTo(result1));
         }
 
-        [Test]
-        public void Test_Divide()
-        {
-            double result = calc.Divide(10, 2);
 
-            Assert.That(result, Is.EqualTo(5));
+
+
+        [TestCase(15, 2, 7.5)]
+        [TestCase(1, 1, 1)]
+        [TestCase(-2, 2, -1)]
+        [TestCase(2, 1, 2)]
+
+        public void Test_Divide(double a, double b, double result)
+        {
+            double result1 = calc.Divide(a, b);
+
+            Assert.That(result, Is.EqualTo(result1));
+        }
+
+
+
+
+        [Test]
+        public void Test_Exception()
+        {
+            Assert.That(() => calc.Divide(2, 0), Throws.TypeOf<DivideByZeroException>());
+
+
+        }
+
+
+
+
+        [TestCase(15, 2)]
+        [TestCase(1, 1)]
+        [TestCase(-2, 2)]
+        [TestCase(2, 1)]
+        public void Test_Clear(int a, int b)
+        {
+            calc.Add(a, b);
+            calc.Divide(a, b);
+            calc.Clear();
+
+            Assert.That(calc.Accumulator,Is.EqualTo(0));
+
         }
 
 
@@ -67,6 +108,10 @@ namespace TestProject1
             
             Assert.That(calc.Accumulator, Is.EqualTo(5));
         }
+
+
+
+
 
     }
 }

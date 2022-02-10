@@ -17,6 +17,8 @@ namespace SW_test_opg
         {
             return Accumulator=a * b;
         }
+
+
         public double Power(double x, double exp)
         {
             return Accumulator=Math.Pow(x, exp);
@@ -24,15 +26,18 @@ namespace SW_test_opg
 
         public double Divide(double dividend, double divisor)
         {
-            try
+            
+
+            if (divisor==0)
             {
-                return Accumulator= dividend / divisor;
+                throw new DivideByZeroException();
             }
-            catch (DivideByZeroException e)
+            else
             {
-                Console.WriteLine(e);
-                return Accumulator= 0;
+                Accumulator = dividend / divisor;
             }
+            
+            return Accumulator;
         }
 
         public void Clear()
