@@ -39,7 +39,6 @@ namespace TestProject1
         [TestCase(-3, -4, 12)]
         [TestCase(2, -5, -10)]
         public void MultiplyNumbers_ResultIsCorrect(double a,double b,double result)
-        public void Test_Multiply()
         {
 
             //Act + Assert
