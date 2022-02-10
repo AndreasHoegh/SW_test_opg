@@ -47,5 +47,13 @@ namespace TestProject1
             //Assert
             Assert.That(result, Is.EqualTo(2));
         }
+
+        [Test]
+        public void Test_Power()
+        {
+            double result = calc.Power(9, 2);
+
+            Assert.That(result, Is.EqualTo(81));
+        }
     }
 }

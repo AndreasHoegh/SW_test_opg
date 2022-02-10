@@ -10,6 +10,8 @@ namespace SW_test_opg
 
             
             Console.WriteLine(calc.Add(3, 2));
+
+
         }
     }
 }
