@@ -3,7 +3,9 @@ namespace SW_test_opg
 {
     public class Calculator
     {
-        private double result;
+
+       
+
 
         public double Add(double a, double b)
         {
