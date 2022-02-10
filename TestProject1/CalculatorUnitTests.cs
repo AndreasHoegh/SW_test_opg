@@ -55,5 +55,16 @@ namespace TestProject1
 
             Assert.That(result, Is.EqualTo(81));
         }
+
+        [Test]
+        public void Test_Divide()
+        {
+            double result = calc.Divide(10, 2);
+
+            Assert.That(result, Is.EqualTo(5));
+        }
+
+
+
     }
 }
