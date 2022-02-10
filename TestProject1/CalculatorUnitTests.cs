@@ -13,6 +13,15 @@ namespace TestProject1
             calc = new Calculator();
         }
 
+        [TestCase(3, 2, 5)]
+        [TestCase(-3, -2, -5)]
+        [TestCase(-3, 2, -1)]
+        [TestCase(3, -2, 1)]
+        [TestCase(3, 0, 3)]
+        public void Add_AddPosAndNegNumbers_ResultIsCorrect(int a, int b, int result)
+        {
+            Assert.That(calc.Add(a, b), Is.EqualTo(result));
+        }
 
         [Test]
         public void Test_Add()
