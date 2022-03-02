@@ -16,7 +16,7 @@ namespace TestProject1
             calc = new Calculator();
         }
 
-        [TestCase(7,8,15)]
+        [TestCase(7,7,14)]
         [TestCase(-3,-4,-7)]
         [TestCase(2,-5,-3)]
         [TestCase(2.5, 2, 4.5)]
