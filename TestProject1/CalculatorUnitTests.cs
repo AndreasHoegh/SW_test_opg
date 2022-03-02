@@ -11,8 +11,7 @@ namespace TestProject1
         [SetUp]
         public void Setup()
         {
-            //Arrangee
-            //gasgsagasgasg
+            //Arrange
 
             calc = new Calculator();
         }
